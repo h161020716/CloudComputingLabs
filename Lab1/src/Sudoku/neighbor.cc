@@ -58,19 +58,19 @@ static void print_neighbors(const bool adjacent[ROW][COL], int row, int col, int
   puts("\n");
 }
 
-/*public*/ void init_neighbors()
+/*public*/ void init_neighbors() // 初始化邻居
 {
   for (int row = 0; row < ROW; ++row) {
     for (int col = 0; col < COL; ++col) {
-      bool adjacent[ROW][COL];
-      bzero(adjacent, sizeof adjacent);
-      mark_adjacent(adjacent, row, col);
+      bool adjacent[ROW][COL]; // 邻接矩阵
+      bzero(adjacent, sizeof adjacent); // 初始化邻接矩阵
+      mark_adjacent(adjacent, row, col); // 标记邻接矩阵
 
       int me = row*COL + col;
-      collect_neighbors(adjacent, row, col, neighbors[me]);
+      collect_neighbors(adjacent, row, col, neighbors[me]); // 收集邻居
 
       if (DEBUG_MODE)
-        print_neighbors(adjacent, row, col, neighbors[me]);
+        print_neighbors(adjacent, row, col, neighbors[me]); // 打印邻居
     }
   }
 }
