@@ -1,7 +1,17 @@
-CXXFLAGS+=-O2 -ggdb -DDEBUG
-CXXFLAGS+=-Wall -Wextra
+CXX = g++  
+CXXFLAGS += -std=c++11 -pthread -o -ggdb -DDEBUG -Wall -Wextra  
 
-all: sudoku
+# 默认目标  
+all: sudoku_solve  
 
-sudoku: main.cc neighbor.cc sudoku_basic.cc sudoku_min_arity.cc sudoku_min_arity_cache.cc sudoku_dancing_links.cc
-	g++ -O2 -o $@ $^
+# 定义目标和依赖关系  
+sudoku_solve: main.cc sudoku_dancing_links.cc  sudoku.h
+	$(CXX) $(CXXFLAGS) -o $@ $^   
+
+# 模式规则，用于编译源文件为目标文件  
+%.o: %.cc  
+	$(CXX) $(CXXFLAGS) -c $<  # 编译源文件为对象文件  
+
+# 清理构建的文件  
+clean:  
+	rm -f sudoku_solve *.o  

@@ -21,8 +21,7 @@ else
     mkdir ${test_data_txt}_Folder
 	echo "创建${test_data_txt}_Folder"
 fi
-
-touch ${Record_Time}
+ 
 
 echo "Team_Name,Use_Time(ms),Creat_Time,Modify_Time" > ${Record_Time}
 
@@ -153,7 +152,7 @@ Basic_Test(){
 
 Advanced_Test(){
 	# $1 team_name $2 test_data_file_name
-	test_data=$(cat $2) # ./test10000
+	# test_data=$(cat $2) # ./test10000
 	Answer_Line=0
 	Exe_Prog=""
 	cd ${Current_Folder}
