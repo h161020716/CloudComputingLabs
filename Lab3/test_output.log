@@ -1,0 +1,115 @@
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+netcat 已经是最新版 (1.218-4ubuntu1)。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 77 个软件包未被升级。
+[32m【tester】：---------------------------------- Global test start ----------------------------------[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 1 -------------------------------------[0m
+[32m【tester】：Test item 1. Test point: Run kvstore2pcsystem.[0m
+[32m【tester】：Language checking......[0m
+[31m【tester】：Warning: [ UNKNOWN programing_language ][0m
+[32m【tester】：Start make, waiting for a while......[0m
+make: 进入目录“/root/src/CloudComputingLabs/Lab3”
+make: 对“all”无需做任何事。
+make: 离开目录“/root/src/CloudComputingLabs/Lab3”
+[32m【tester】：Make successfully[0m
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower1.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 1, client port: 8001, raft port: 7001
+RaftNode initialized with ID: 1
+Run follower[0] successfully
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower2.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 2, client port: 8002, raft port: 7002
+RaftNode initialized with ID: 2
+Run follower[1] successfully
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower3.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 3, client port: 8003, raft port: 7003
+RaftNode initialized with ID: 3
+Run follower[2] successfully
+Run kvstoreraftsystem successfully
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 1 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 2 -------------------------------------[0m
+[32m【tester】：Test item 2. Test point: Set key to hold string value.[0m
+[32m【tester】：发送 SET item2_key item2_value 命令[0m
+[32m【tester】：请求发送到: 192.168.66.201:8001[0m
+Connected to peer 2 at 192.168.66.202:7002
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:56124 on raft port
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:42890 on raft port
+Connected to peer 3 at 192.168.66.203:7003
+Network manager started
+[RaftCore:] Node 1 started as follower, term: 0
+RaftNode started
+New connection from 192.168.66.101:42896 on raft port
+LogApplier thread started
+New connection from 192.168.66.101:58814 on client port
+Connected to peer 3 at 192.168.66.203:7003
+Network manager started
+[RaftCore:] Node 2 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:34824 on raft port
+Connected to peer 2 at 192.168.66.202:7002
+Network manager started
+[RaftCore:] Node 3 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:34828 on raft port
+New connection from 192.168.66.101:56138 on raft port
+[RaftCore:] 1 become candidate, term= 1
+[RaftCore:] 向节点 2 发送投票请求
+[RaftCore:] 向节点 3 发送投票请求
+[RaftCore:] 2 become candidate, term= 1
+[RaftCore:] 向节点 1 发送投票请求
+[RaftCore:] 向节点 3 发送投票请求
+[RaftCore:] 2 收到来自节点 1 的投票请求
+[RaftCore:] 3 收到来自节点 1 的投票请求
+[RaftCore:] 3 收到来自节点 2 的投票请求
+[RaftCore:] 1 收到来自节点 2 的投票请求
+[RaftCore:] 1 收到来自节点 2 的投票响应
+[RaftCore:] 1 收到来自节点 3 的投票响应
+[RaftCore:] 1 获得来自节点 3 的投票，当前票数: 2
+[RaftCore:] 1 become leader, term=1
+[RaftCore:] 2 收到来自节点 3 的投票响应
+[RaftCore:] 2 收到来自节点 1 的投票响应
+[RaftCore:] 2 未获得多数票，变回follower
+[32m【tester】：收到响应: +TRYAGAIN[0m
+[31m【tester】：【重试】收到TRYAGAIN响应，等待2秒后进行第1次重试 (最多10次)[0m
+[32m【tester】：请求发送到: 192.168.66.201:8001[0m
+New connection from 192.168.66.101:41724 on client port
+[RaftNode:] Node(1)开始应用log(1): *3
+$3
+SET
+$9
+item2_key
+$11
+item2_value
+
+[RaftNode:] Node(1)完成应用log(1)
+[RaftNode:] Node(2)开始应用log(1): *3
+$3
+SET
+$9
+item2_key
+$11
+item2_value
+
+[RaftNode:] Node(2)完成应用log(1)
+[RaftNode:] Node(3)开始应用log(1): *3
+$3
+SET
+$9
+item2_key
+$11
+item2_value
+
+[RaftNode:] Node(3)完成应用log(1)

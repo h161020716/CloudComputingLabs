@@ -1,0 +1,739 @@
+nohup: 忽略输入
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+正在读取软件包列表...
+正在分析软件包的依赖关系树...
+正在读取状态信息...
+netcat 已经是最新版 (1.218-4ubuntu1)。
+升级了 0 个软件包，新安装了 0 个软件包，要卸载 0 个软件包，有 77 个软件包未被升级。
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+Error: Exclusivity flag on, cannot modify.
+[32m【tester】：---------------------------------- Global test start ----------------------------------[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 1 -------------------------------------[0m
+[32m【tester】：Test item 1. Test point: Run kvstore2pcsystem.[0m
+[32m【tester】：Language checking......[0m
+[32m【tester】：Language: [ C/C++ ][0m
+[32m【tester】：Start make, waiting for a while......[0m
+make: 进入目录“/root/src/CloudComputingLabs/Lab3”
+make: 对“all”无需做任何事。
+make: 离开目录“/root/src/CloudComputingLabs/Lab3”
+[32m【tester】：Make successfully[0m
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower1.conf
+Run follower[0] successfully
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 1, client port: 8001, raft port: 7001
+RaftNode initialized with ID: 1
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower2.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 2, client port: 8002, raft port: 7002
+RaftNode initialized with ID: 2
+Run follower[1] successfully
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower3.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 3, client port: 8003, raft port: 7003
+RaftNode initialized with ID: 3
+Run follower[2] successfully
+Run kvstoreraftsystem successfully
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 1 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 2 -------------------------------------[0m
+[32m【tester】：Test item 2. Test point: Set key to hold string value.[0m
+[32m【tester】：发送 SET item2_key item2_value 命令[0m
+[32m【tester】：请求发送到: 192.168.66.201:8001[0m
+Connected to peer 2 at 192.168.66.202:7002
+Connected to peer 1 at 192.168.66.201:7001
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:57644 on raft port
+New connection from 192.168.66.101:55052 on raft port
+New connection from 192.168.66.101:55068 on raft port
+Connected to peer 3 at 192.168.66.203:7003
+Network manager started
+[RaftCore:] Node 1 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:37994 on client port
+Connected to peer 3 at 192.168.66.203:7003
+Network manager started
+[RaftCore:] Node 2 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+Connected to peer 2 at 192.168.66.202:7002
+Network manager started
+[RaftCore:] Node 3 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:58708 on raft port
+New connection from 192.168.66.101:58714 on raft port
+New connection from 192.168.66.101:57656 on raft port
+[RaftCore:] 1 become candidate, term= 1
+[RaftCore:] 向节点 2 发送投票请求
+[RaftCore:] 向节点 3 发送投票请求
+[RaftCore:] 2 become candidate, term= 1
+[RaftCore:] 向节点 1 发送投票请求
+[RaftCore:] 向节点 3 发送投票请求
+[RaftCore:] 3 become candidate, term= 1
+[RaftCore:] 向节点 1 发送投票请求
+[RaftCore:] 向节点 2 发送投票请求
+[RaftCore:] 2 收到来自节点 1 的投票请求
+[RaftCore:] 3 收到来自节点 1 的投票请求
+[RaftCore:] 3 收到来自节点 2 的投票请求
+[RaftCore:] 1 收到来自节点 2 的投票请求
+[RaftCore:] 2 收到来自节点 3 的投票请求
+[RaftCore:] 1 收到来自节点 3 的投票请求
+[RaftCore:] 1 收到来自节点 2 的投票响应
+[RaftCore:] 1 收到来自节点 3 的投票响应
+[RaftCore:] 2 收到来自节点 3 的投票响应
+[RaftCore:] 2 收到来自节点 1 的投票响应
+[RaftCore:] 3 收到来自节点 2 的投票响应
+[RaftCore:] 3 收到来自节点 1 的投票响应
+[RaftCore:] 2 未获得多数票，变回follower
+[RaftCore:] 3 未获得多数票，变回follower
+[RaftCore:] 1 未获得多数票，变回follower
+[RaftCore:] 2 become candidate, term= 2
+[RaftCore:] 向节点 1 发送投票请求
+[RaftCore:] 向节点 3 发送投票请求
+[RaftCore:] 3 收到来自节点 2 的投票请求
+[RaftCore:] 1 收到来自节点 2 的投票请求
+[RaftCore:] 2 收到来自节点 3 的投票响应
+[RaftCore:] 2 获得来自节点 3 的投票，当前票数: 2
+[RaftCore:] 2 become leader, term=2
+[RaftCore:] 2 收到来自节点 1 的投票响应
+[32m【tester】：收到响应: +TRYAGAIN[0m
+[31m【tester】：【重试】收到TRYAGAIN响应，等待2秒后进行第1次重试 (最多10次)[0m
+[32m【tester】：请求发送到: 192.168.66.201:8001[0m
+New connection from 192.168.66.101:49128 on client port
+[32m【tester】：收到响应: +MOVED 2[0m
+[31m【tester】：【重定向】收到MOVED响应，切换到leader 2 (192.168.66.202:8002)[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:44534 on client port
+[RaftNode:] Node(2)开始应用log(1): *3
+$3
+SET
+$9
+item2_key
+$11
+item2_value
+
+[RaftNode:] Node(2)完成应用log(1)
+[RaftNode:] Node(3)开始应用log(1): *3
+$3
+SET
+$9
+item2_key
+$11
+item2_value
+
+[RaftNode:] Node(3)完成应用log(1)
+[RaftNode:] Node(1)开始应用log(1): *3
+$3
+SET
+$9
+item2_key
+$11
+item2_value
+
+[RaftNode:] Node(1)完成应用log(1)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：item set set_result: +OK[0m
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 2 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 3 -------------------------------------[0m
+[32m【tester】：Test item 3. Test point: Get the value of key.[0m
+[32m【tester】：发送 SET item3_key item3_value 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:60246 on client port
+[RaftNode:] Node(2)开始应用log(2): *3
+$3
+SET
+$9
+item3_key
+$11
+item3_value
+
+[RaftNode:] Node(2)完成应用log(2)
+[RaftNode:] Node(3)开始应用log(2): *3
+$3
+SET
+$9
+item3_key
+$11
+item3_value
+
+[RaftNode:] Node(3)完成应用log(2)
+[RaftNode:] Node(1)开始应用log(2): *3
+$3
+SET
+$9
+item3_key
+$11
+item3_value
+
+[RaftNode:] Node(1)完成应用log(2)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+./lab3_testing.sh: 第 822 行： 548538 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+[32m【tester】：Language checking......[0m
+[32m【tester】：Language: [ C/C++ ][0m
+[32m【tester】：Start make, waiting for a while......[0m
+make: 进入目录“/root/src/CloudComputingLabs/Lab3”
+make: 对“all”无需做任何事。
+make: 离开目录“/root/src/CloudComputingLabs/Lab3”
+[32m【tester】：Make successfully[0m
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower3.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 3, client port: 8003, raft port: 7003
+RaftNode initialized with ID: 3
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:33008 on raft port
+Connected to peer 3 at 192.168.66.203:7003
+Connected to peer 3 at 192.168.66.203:7003
+Connected to peer 2 at 192.168.66.202:7002
+Network manager started
+[RaftCore:] Node 3 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:58408 on raft port
+New connection from 192.168.66.101:58418 on raft port
+New connection from 192.168.66.101:50624 on raft port
+Run follower[2] successfully
+[32m【tester】：发送 GET item3_key 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:42780 on client port
+[RaftNode:] Node(2)开始应用log(3): *2
+$3
+GET
+$9
+item3_key
+
+[RaftNode:] Node(2)完成应用log(3)
+[RaftNode:] Node(1)开始应用log(3): *2
+$3
+GET
+$9
+item3_key
+
+[RaftNode:] Node(1)完成应用log(3)
+[32m【tester】：收到响应: *1
+$11
+item3_value[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：get_result: *1
+$11
+item3_value[0m
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 3 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 4 -------------------------------------[0m
+[32m【tester】：Test item 4. Test point: Return nil if the key does no exist.[0m
+[32m【tester】：发送 GET item4_key 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:39066 on client port
+[RaftNode:] Node(2)开始应用log(4): *2
+$3
+GET
+$9
+item4_key
+
+[RaftNode:] Node(2)完成应用log(4)
+[RaftNode:] Node(1)开始应用log(4): *2
+$3
+GET
+$9
+item4_key
+
+[RaftNode:] Node(1)完成应用log(4)
+[32m【tester】：收到响应: *1
+$3
+nil[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 4 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------ Test item 5 -------------------------------------[0m
+[32m【tester】：Test item 5. Test point: If the DEL command executed, return the number of keys that were removed.[0m
+[32m【tester】：发送 SET item5_key_1 item5_value_1 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:38472 on client port
+[RaftNode:] Node(2)开始应用log(5): *3
+$3
+SET
+$11
+item5_key_1
+$13
+item5_value_1
+
+[RaftNode:] Node(2)完成应用log(5)
+[RaftNode:] Node(1)开始应用log(5): *3
+$3
+SET
+$11
+item5_key_1
+$13
+item5_value_1
+
+[RaftNode:] Node(1)完成应用log(5)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 SET item5_key_2 item5_value_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:49234 on client port
+[RaftNode:] Node(2)开始应用log(6): *3
+$3
+SET
+$11
+item5_key_2
+$13
+item5_value_2
+
+[RaftNode:] Node(2)完成应用log(6)
+[RaftNode:] Node(1)开始应用log(6): *3
+$3
+SET
+$11
+item5_key_2
+$13
+item5_value_2
+
+[RaftNode:] Node(1)完成应用log(6)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 DEL item5_key_1 item5_key_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:50204 on client port
+[RaftNode:] Node(2)开始应用log(7): *3
+$3
+DEL
+$11
+item5_key_1
+$11
+item5_key_2
+
+[RaftNode:] Node(2)完成应用log(7)
+[RaftNode:] Node(1)开始应用log(7): *3
+$3
+DEL
+$11
+item5_key_1
+$11
+item5_key_2
+
+[RaftNode:] Node(1)完成应用log(7)
+[32m【tester】：收到响应: :2[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 5 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 6 -------------------------------------[0m
+[32m【tester】：Test item 6. Test point: When associating a new value to an existing key, it should overwrite the value of the existing entry,[0m
+[32m【tester】：发送 SET item6_key item6_value 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:40768 on client port
+[RaftNode:] Node(2)开始应用log(8): *3
+$3
+SET
+$9
+item6_key
+$11
+item6_value
+
+[RaftNode:] Node(2)完成应用log(8)
+[RaftNode:] Node(1)开始应用log(8): *3
+$3
+SET
+$9
+item6_key
+$11
+item6_value
+
+[RaftNode:] Node(1)完成应用log(8)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 SET item6_key item6_value_new 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:57662 on client port
+[RaftNode:] Node(2)开始应用log(9): *3
+$3
+SET
+$9
+item6_key
+$15
+item6_value_new
+
+[RaftNode:] Node(2)完成应用log(9)
+[RaftNode:] Node(1)开始应用log(9): *3
+$3
+SET
+$9
+item6_key
+$15
+item6_value_new
+
+[RaftNode:] Node(1)完成应用log(9)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 GET item6_key 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:36996 on client port
+[RaftNode:] Node(2)开始应用log(10): *2
+$3
+GET
+$9
+item6_key
+
+[RaftNode:] Node(2)完成应用log(10)
+[RaftNode:] Node(1)开始应用log(10): *2
+$3
+GET
+$9
+item6_key
+
+[RaftNode:] Node(1)完成应用log(10)
+[32m【tester】：收到响应: *1
+$15
+item6_value_new[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 6 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 7 -------------------------------------[0m
+[32m【tester】：Test item 7. Test point: Correctness testing of DEL command.[0m
+[32m【tester】：发送 SET item7_key item7_value 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:47496 on client port
+[RaftNode:] Node(2)开始应用log(11): *3
+$3
+SET
+$9
+item7_key
+$11
+item7_value
+
+[RaftNode:] Node(2)完成应用log(11)
+[RaftNode:] Node(1)开始应用log(11): *3
+$3
+SET
+$9
+item7_key
+$11
+item7_value
+
+[RaftNode:] Node(1)完成应用log(11)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 DEL item7_key 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:40740 on client port
+[RaftNode:] Node(2)开始应用log(12): *2
+$3
+DEL
+$9
+item7_key
+
+[RaftNode:] Node(2)完成应用log(12)
+[RaftNode:] Node(1)开始应用log(12): *2
+$3
+DEL
+$9
+item7_key
+
+[RaftNode:] Node(1)完成应用log(12)
+[32m【tester】：收到响应: :1[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 GET item7_key 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:42620 on client port
+[RaftNode:] Node(2)开始应用log(13): *2
+$3
+GET
+$9
+item7_key
+
+[RaftNode:] Node(2)完成应用log(13)
+[RaftNode:] Node(1)开始应用log(13): *2
+$3
+GET
+$9
+item7_key
+
+[RaftNode:] Node(1)完成应用log(13)
+[32m【tester】：收到响应: *1
+$3
+nil[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：============================ [[32mPASSED[0m] : Test item 7 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 8 -------------------------------------[0m
+[32m【tester】：Test item 8. Test point: Kill one of the store processes.[0m
+[32m【tester】：发送 SET item8_key item8_key_value_1 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:55170 on client port
+[RaftNode:] Node(2)开始应用log(14): *3
+$3
+SET
+$9
+item8_key
+$17
+item8_key_value_1
+
+[RaftNode:] Node(2)完成应用log(14)
+[RaftNode:] Node(1)开始应用log(14): *3
+$3
+SET
+$9
+item8_key
+$17
+item8_key_value_1
+
+[RaftNode:] Node(1)完成应用log(14)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 SET item8_key item8_key_value_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:46246 on client port
+[RaftNode:] Node(2)开始应用log(15): *3
+$3
+SET
+$9
+item8_key
+$17
+item8_key_value_2
+
+[RaftNode:] Node(2)完成应用log(15)
+[RaftNode:] Node(1)开始应用log(15): *3
+$3
+SET
+$9
+item8_key
+$17
+item8_key_value_2
+
+[RaftNode:] Node(1)完成应用log(15)
+[32m【tester】：收到响应: +OK[0m
+[32m【tester】：请求成功完成，无需重试[0m
+./lab3_testing.sh: 第 961 行： 548522 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+[32m【tester】：发送 SET item8_key item8_key_value_3 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:59240 on client port
+[32m【tester】：收到响应: [0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 GET item8_key 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:49118 on client port
+[32m【tester】：收到响应: [0m
+[32m【tester】：请求成功完成，无需重试[0m
+[31m【tester】：============================ [[31mFAILED[0m] : Test item 8 ============================[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------- Test item 9 -------------------------------------[0m
+[32m【tester】：Test item 9. Test point: Kill all storage proccesses.[0m
+[32m【tester】：发送 SET item9_key item9_key_value_1 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:48176 on client port
+[32m【tester】：收到响应: [0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 SET item9_key item9_key_value_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:42316 on client port
+[32m【tester】：收到响应: [0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       | |                                   [0m
+[32m【tester】：                                       \|/                                   [0m
+[32m【tester】：------------------------------------ Test item 10 -------------------------------------[0m
+[32m【tester】：Test item 10. Test point: extreme version test, Kill two storage nodes and restart them before testing GET and DEL.[0m
+[32m【tester】：Language checking......[0m
+[32m【tester】：Language: [ C/C++ ][0m
+[32m【tester】：Start make, waiting for a while......[0m
+make: 进入目录“/root/src/CloudComputingLabs/Lab3”
+make: 对“all”无需做任何事。
+make: 离开目录“/root/src/CloudComputingLabs/Lab3”
+[32m【tester】：Make successfully[0m
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower1.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 1, client port: 8001, raft port: 7001
+RaftNode initialized with ID: 1
+Connected to peer 2 at 192.168.66.202:7002
+Connected to peer 1 at 192.168.66.201:7001
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:51036 on raft port
+New connection from 192.168.66.101:37076 on raft port
+New connection from 192.168.66.101:37090 on raft port
+Connected to peer 3 at 192.168.66.203:7003
+Network manager started
+[RaftCore:] Node 1 started as follower, term: 2
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:47888 on raft port
+Run follower[0] successfully
+[32m【tester】：发送 SET item10_key_1 item10_key_1_value_1 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:35186 on client port
+[32m【tester】：收到响应: [0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 SET item10_key_2 item10_key_2_value_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:38496 on client port
+[32m【tester】：收到响应: [0m
+[32m【tester】：请求成功完成，无需重试[0m
+[RaftCore:] 1 become candidate, term= 3
+[RaftCore:] 向节点 2 发送投票请求
+[RaftCore:] 向节点 3 发送投票请求
+[RaftCore:] 1 未获得多数票，变回follower
+./lab3_testing.sh: 第 1032 行： 548525 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+./lab3_testing.sh: 第 1032 行： 548960 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+[32m【tester】：Language checking......[0m
+[32m【tester】：Language: [ C/C++ ][0m
+[32m【tester】：Start make, waiting for a while......[0m
+make: 进入目录“/root/src/CloudComputingLabs/Lab3”
+make: 对“all”无需做任何事。
+make: 离开目录“/root/src/CloudComputingLabs/Lab3”
+[32m【tester】：Make successfully[0m
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower2.conf
+[RaftCore:] 1 become candidate, term= 4
+[RaftCore:] 向节点 2 发送投票请求
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 2, client port: 8002, raft port: 7002
+RaftNode initialized with ID: 2
+Connected to peer 2 at 192.168.66.202:7002
+[RaftCore:] 向节点 3 发送投票请求
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:38430 on raft port
+[RaftCore:] 2 收到来自节点 1 的投票请求
+New connection from 192.168.66.101:60400 on raft port
+[RaftCore:] 1 收到来自节点 2 的投票响应
+[RaftCore:] 1 获得来自节点 2 的投票，当前票数: 2
+[RaftCore:] 1 become leader, term=4
+Network manager started
+[RaftCore:] Node 2 started as follower, term: 4
+RaftNode started
+LogApplier thread started
+Run follower[1] successfully
+[32m【tester】：Language checking......[0m
+[32m【tester】：Language: [ C/C++ ][0m
+[32m【tester】：Start make, waiting for a while......[0m
+make: 进入目录“/root/src/CloudComputingLabs/Lab3”
+make: 对“all”无需做任何事。
+make: 离开目录“/root/src/CloudComputingLabs/Lab3”
+[32m【tester】：Make successfully[0m
+Starting Raft node with config /root/src/CloudComputingLabs/Lab3/follower3.conf
+ThreadPool initialized: 2 threads for client requests, 2 threads for Raft messages
+NetworkManager initialized with node ID: 3, client port: 8003, raft port: 7003
+RaftNode initialized with ID: 3
+Connected to peer 1 at 192.168.66.201:7001
+New connection from 192.168.66.101:60404 on raft port
+Connected to peer 2 at 192.168.66.202:7002
+Network manager started
+[RaftCore:] Node 3 started as follower, term: 0
+RaftNode started
+LogApplier thread started
+New connection from 192.168.66.101:38444 on raft port
+Run follower[2] successfully
+Connected to peer 3 at 192.168.66.203:7003
+New connection from 192.168.66.101:56150 on raft port
+Connected to peer 3 at 192.168.66.203:7003
+New connection from 192.168.66.101:43154 on raft port
+[32m【tester】：发送 GET item10_key_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.202:8002[0m
+New connection from 192.168.66.101:40068 on client port
+[32m【tester】：收到响应: +MOVED 1[0m
+[31m【tester】：【重定向】收到MOVED响应，切换到leader 1 (192.168.66.201:8001)[0m
+[32m【tester】：请求发送到: 192.168.66.201:8001[0m
+New connection from 192.168.66.101:58318 on client port
+[RaftNode:] Node(1)开始应用log(1): *2
+$3
+GET
+$12
+item10_key_2
+
+[RaftNode:] Node(1)完成应用log(1)
+[RaftNode:] Node(3)开始应用log(1): *2
+$3
+GET
+$12
+item10_key_2
+
+[RaftNode:] Node(3)完成应用log(1)
+[RaftNode:] Node(2)开始应用log(1): *2
+$3
+GET
+$12
+item10_key_2
+
+[RaftNode:] Node(2)完成应用log(1)
+[32m【tester】：收到响应: *1
+$3
+nil[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[32m【tester】：发送 DEL item10_key_1 item10_key_2 命令[0m
+[32m【tester】：请求发送到: 192.168.66.201:8001[0m
+New connection from 192.168.66.101:53416 on client port
+[RaftNode:] Node(1)开始应用log(2): *3
+$3
+DEL
+$12
+item10_key_1
+$12
+item10_key_2
+
+[RaftNode:] Node(1)完成应用log(2)
+[RaftNode:] Node(3)开始应用log(2): *3
+$3
+DEL
+$12
+item10_key_1
+$12
+item10_key_2
+
+[RaftNode:] Node(3)完成应用log(2)
+[RaftNode:] Node(2)开始应用log(2): *3
+$3
+DEL
+$12
+item10_key_1
+$12
+item10_key_2
+
+[RaftNode:] Node(2)完成应用log(2)
+[32m【tester】：收到响应: :0[0m
+[32m【tester】：请求成功完成，无需重试[0m
+[31m【tester】：============================ [[31mFAILED[0m] : Test item 10 ============================[0m
+[32m【tester】：---------------------------------- Global test done -----------------------------------[0m
+./lab3_testing.sh: 第 174 行： 549640 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+./lab3_testing.sh: 第 174 行： 549704 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+./lab3_testing.sh: 第 174 行： 549742 已杀死               ${LAB3_ABSOLUTE_PATH}"/${EXECUTABLE_FILE_NAME}" --config_path $2
+[32m【tester】：Language: [ C/C++ ][0m
+[32m【tester】：VERSION: [ 2 ][0m
+[32m【tester】：---------------------------------- Passing situation ----------------------------------[0m
+[32m【tester】：Test items 1 [ [32mPASSED[0m ][0m
+[32m【tester】：Test items 2 [ [32mPASSED[0m ][0m
+[32m【tester】：Test items 3 [ [32mPASSED[0m ][0m
+[32m【tester】：Test items 4 [ [32mPASSED[0m ][0m
+[32m【tester】：Test items 5 [ [32mPASSED[0m ][0m
+[32m【tester】：Test items 6 [ [32mPASSED[0m ][0m
+[32m【tester】：Test items 7 [ [32mPASSED[0m ][0m
+[31m【tester】：Test items 8 [ [31mFAILED[0m ][0m
+[32m【tester】：Test items 9 [ [32mPASSED[0m ][0m
+[31m【tester】：Test items 10 [ [31mFAILED[0m ][0m
+[32m【tester】：--------------------------------- Total score: [ [33m18[32m ] ----------------------------------[0m
