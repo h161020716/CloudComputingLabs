@@ -1,0 +1,68 @@
+{"timestamp": "2025-06-05 12:23:03", "message": "日志系统初始化完成", "details": {"time": "2025-06-05 12:23:03"}}
+{"timestamp": "2025-06-05 12:23:03", "message": "初始化应用", "details": {}}
+{"timestamp": "2025-06-05 12:23:03", "message": "发送RESP命令", "details": {"host": "127.0.0.1", "port": 8001, "cmd_length": 32, "cmd_preview": "*2\r\n$3\r\nGET\r\n$12\r\nllm_backends\r\n"}}
+{"timestamp": "2025-06-05 12:23:06", "message": "连接到Raft节点超时", "details": {"host": "127.0.0.1", "port": 8001}}
+{"timestamp": "2025-06-05 12:23:06", "message": "发送RESP命令", "details": {"host": "127.0.0.1", "port": 8002, "cmd_length": 32, "cmd_preview": "*2\r\n$3\r\nGET\r\n$12\r\nllm_backends\r\n"}}
+{"timestamp": "2025-06-05 12:23:09", "message": "连接到Raft节点超时", "details": {"host": "127.0.0.1", "port": 8002}}
+{"timestamp": "2025-06-05 12:23:09", "message": "发送RESP命令", "details": {"host": "127.0.0.1", "port": 8001, "cmd_length": 32, "cmd_preview": "*2\r\n$3\r\nGET\r\n$12\r\nllm_backends\r\n"}}
+{"timestamp": "2025-06-05 12:23:12", "message": "连接到Raft节点超时", "details": {"host": "127.0.0.1", "port": 8001}}
+{"timestamp": "2025-06-05 12:23:12", "message": "开始解码RESP数据", "details": {"data_length": 35, "data_prefix": "$-1\r\nERROR:所有Raft节点均无法连接，请检查服务器状态\r\n"}}
+{"timestamp": "2025-06-05 12:23:12", "message": "RAFT GET结果", "details": {"key": "llm_backends", "result_type": "None", "result_preview": "None"}}
+{"timestamp": "2025-06-05 12:23:12", "message": "开始解码RESP数据", "details": {"data_length": 35, "data_prefix": "$-1\r\nERROR:所有Raft节点均无法连接，请检查服务器状态\r\n"}}
+{"timestamp": "2025-06-05 12:23:12", "message": "后端初始化完成", "details": {"数量": 0, "来源": "默认配置"}}
+{"timestamp": "2025-06-05 12:23:12", "message": "应用初始化完成", "details": {}}
+{"timestamp": "2025-06-05 12:23:12", "message": "启动Web服务器", "details": {"host": "0.0.0.0", "port": 5000}}
+{"timestamp": "2025-06-05 12:23:12", "message": "保存用户后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:23:12", "message": "为新用户创建后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:23:12", "message": "初始化用户后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:23:13", "message": "加载会话数据失败", "details": {"error": "Expecting value: line 1 column 1 (char 0)"}}
+{"timestamp": "2025-06-05 12:23:13", "message": "加载会话数据失败", "details": {"error": "Expecting value: line 1 column 1 (char 0)"}}
+{"timestamp": "2025-06-05 12:23:13", "message": "获取用户后端列表", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:23:19", "message": "用户登出", "details": {"username": "popo"}}
+{"timestamp": "2025-06-05 12:23:20", "message": "用户登录成功", "details": {"username": "popo"}}
+{"timestamp": "2025-06-05 12:23:20", "message": "创建用户会话", "details": {"username": "popo", "expires_at": "2025-06-12T12:23:20.812850"}}
+{"timestamp": "2025-06-05 12:23:20", "message": "用户登录", "details": {"username": "popo", "result": "成功"}}
+{"timestamp": "2025-06-05 12:23:21", "message": "初始化用户后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:23:22", "message": "获取对话列表", "details": {"user_id": "user_1749093757_d8e7a95a", "conversation_count": 1}}
+{"timestamp": "2025-06-05 12:23:22", "message": "获取用户后端列表", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:23:22", "message": "获取对话历史", "details": {"user_id": "user_1749093757_d8e7a95a", "conversation_id": "20250605_121423_729", "message_count": 7}}
+{"timestamp": "2025-06-05 12:23:32", "message": "保存对话历史", "details": {"conversation_id": "20250605_121423_729", "message_count": 8}}
+{"timestamp": "2025-06-05 12:23:32", "message": "保存用户消息", "details": {"conversation_id": "20250605_121423_729", "success": true, "message_count": 8}}
+{"timestamp": "2025-06-05 12:23:32", "message": "用户发送消息", "details": {"conversation_id": "20250605_121423_729", "message": "强词夺理"}}
+{"timestamp": "2025-06-05 12:23:32", "message": "为用户选择后端", "details": {"user_id": "user_1749093757_d8e7a95a", "backend_id": 0, "base_url": "https://api.deepseek.com", "model": "deepseek-chat", "weight": 1}}
+{"timestamp": "2025-06-05 12:23:32", "message": "使用OpenAI原生客户端", "details": {}}
+{"timestamp": "2025-06-05 12:23:38", "level": "ERROR", "message": "API调用异常", "details": {"error": "Error code: 401 - {'error': {'message': 'Authentication Fails, Your api key: ****here is invalid', 'type': 'authentication_error', 'param': None, 'code': 'invalid_request_error'}}"}}
+{"timestamp": "2025-06-05 12:23:38", "message": "模型响应完成", "details": {"conversation_id": "20250605_121423_729", "耗时": "5.56秒"}}
+{"timestamp": "2025-06-05 12:23:38", "message": "保存对话历史", "details": {"conversation_id": "20250605_121423_729", "message_count": 9}}
+{"timestamp": "2025-06-05 12:23:38", "message": "保存完整对话历史", "details": {"conversation_id": "20250605_121423_729", "success": true, "total_messages": 9}}
+{"timestamp": "2025-06-05 12:24:12", "message": "保存用户后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 2}}
+{"timestamp": "2025-06-05 12:24:12", "message": "用户添加新后端", "details": {"user_id": "user_1749093757_d8e7a95a", "base_url": "https://api.deepseek.com", "model": "deepseek-reasoner"}}
+{"timestamp": "2025-06-05 12:24:13", "message": "获取用户后端列表", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 2}}
+{"timestamp": "2025-06-05 12:24:16", "message": "保存用户后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:24:16", "message": "用户删除后端", "details": {"user_id": "user_1749093757_d8e7a95a", "base_url": "https://api.deepseek.com", "model": "deepseek-chat"}}
+{"timestamp": "2025-06-05 12:24:17", "message": "获取用户后端列表", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:24:21", "message": "保存对话历史", "details": {"conversation_id": "20250605_121423_729", "message_count": 10}}
+{"timestamp": "2025-06-05 12:24:21", "message": "保存用户消息", "details": {"conversation_id": "20250605_121423_729", "success": true, "message_count": 10}}
+{"timestamp": "2025-06-05 12:24:21", "message": "用户发送消息", "details": {"conversation_id": "20250605_121423_729", "message": "强词夺理"}}
+{"timestamp": "2025-06-05 12:24:21", "message": "为用户选择后端", "details": {"user_id": "user_1749093757_d8e7a95a", "backend_id": 0, "base_url": "https://api.deepseek.com", "model": "deepseek-reasoner", "weight": 1}}
+{"timestamp": "2025-06-05 12:24:21", "message": "使用OpenAI原生客户端", "details": {}}
+{"timestamp": "2025-06-05 12:24:44", "message": "模型响应完成", "details": {"conversation_id": "20250605_121423_729", "耗时": "22.57秒"}}
+{"timestamp": "2025-06-05 12:24:44", "message": "保存对话历史", "details": {"conversation_id": "20250605_121423_729", "message_count": 11}}
+{"timestamp": "2025-06-05 12:24:44", "message": "保存完整对话历史", "details": {"conversation_id": "20250605_121423_729", "success": true, "total_messages": 11}}
+{"timestamp": "2025-06-05 12:24:58", "message": "用户登出", "details": {"username": "popo"}}
+{"timestamp": "2025-06-05 12:24:59", "message": "用户登录成功", "details": {"username": "popo"}}
+{"timestamp": "2025-06-05 12:24:59", "message": "创建用户会话", "details": {"username": "popo", "expires_at": "2025-06-12T12:24:59.749133"}}
+{"timestamp": "2025-06-05 12:24:59", "message": "用户登录", "details": {"username": "popo", "result": "成功"}}
+{"timestamp": "2025-06-05 12:25:00", "message": "初始化用户后端配置", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:25:00", "message": "获取对话列表", "details": {"user_id": "user_1749093757_d8e7a95a", "conversation_count": 1}}
+{"timestamp": "2025-06-05 12:25:01", "message": "获取用户后端列表", "details": {"user_id": "user_1749093757_d8e7a95a", "count": 1}}
+{"timestamp": "2025-06-05 12:25:01", "message": "获取对话历史", "details": {"user_id": "user_1749093757_d8e7a95a", "conversation_id": "20250605_121423_729", "message_count": 11}}
+{"timestamp": "2025-06-05 12:25:11", "message": "保存对话历史", "details": {"conversation_id": "20250605_121423_729", "message_count": 12}}
+{"timestamp": "2025-06-05 12:25:11", "message": "保存用户消息", "details": {"conversation_id": "20250605_121423_729", "success": true, "message_count": 12}}
+{"timestamp": "2025-06-05 12:25:11", "message": "用户发送消息", "details": {"conversation_id": "20250605_121423_729", "message": "壮志凌云"}}
+{"timestamp": "2025-06-05 12:25:11", "message": "为用户选择后端", "details": {"user_id": "user_1749093757_d8e7a95a", "backend_id": 0, "base_url": "https://api.deepseek.com", "model": "deepseek-reasoner", "weight": 1}}
+{"timestamp": "2025-06-05 12:25:11", "message": "使用OpenAI原生客户端", "details": {}}
+{"timestamp": "2025-06-05 12:25:23", "message": "模型响应完成", "details": {"conversation_id": "20250605_121423_729", "耗时": "11.97秒"}}
+{"timestamp": "2025-06-05 12:25:23", "message": "保存对话历史", "details": {"conversation_id": "20250605_121423_729", "message_count": 13}}
+{"timestamp": "2025-06-05 12:25:23", "message": "保存完整对话历史", "details": {"conversation_id": "20250605_121423_729", "success": true, "total_messages": 13}}
+{"timestamp": "2025-06-05 12:25:56", "message": "用户登出", "details": {"username": "popo"}}

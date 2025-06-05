@@ -1,0 +1,11 @@
+[
+  {
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-reasoner",
+    "api_key": "sk-303b6caa2d614d8ea6e0a6538c69b533",
+    "weight": 1,
+    "status": "active",
+    "last_check": 1749097452.2782824,
+    "failures": 0
+  }
+]
